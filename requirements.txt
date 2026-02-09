@@ -1,0 +1,50 @@
+# ============================================
+# SYNTECXHUB Email Sender Bot - Requirements
+# ============================================
+
+# CORE REQUIREMENTS
+# ----------------
+# Python Version
+python>=3.6
+
+# All core functionality uses Python Standard Library:
+# - smtplib (email sending)
+# - email (email composition)
+# - csv (data handling)
+# - logging (error tracking)
+# - os (file operations)
+# - datetime (timestamps)
+
+# No external packages required for basic functionality!
+
+
+# OPTIONAL DEVELOPMENT DEPENDENCIES
+# --------------------------------
+# Testing
+# pytest>=7.0.0
+
+# Code formatting
+# black>=22.0.0
+
+# Linting
+# flake8>=5.0.0
+
+# Type checking
+# mypy>=0.910
+
+# Fake data generation for testing
+# faker>=14.0.0
+
+
+# INSTALLATION INSTRUCTIONS
+# ------------------------
+# For basic use:
+# 1. Install Python 3.6 or higher
+# 2. Run: python email_sender_bot.py
+
+# For development:
+# 1. pip install -r requirements.txt
+#    (Install optional packages as needed)
+
+# Note: Lines starting with '#' are comments
+# Uncomment lines by removing '#' to install optional packages
