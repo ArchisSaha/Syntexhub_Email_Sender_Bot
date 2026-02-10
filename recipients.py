@@ -14,7 +14,7 @@ class CSVCreator:
     def show_menu(self):
         """Display main menu"""
         print("\n" + "="*60)
-        print("📊 CSV FILE CREATOR - EMAIL SENDER BOT")
+        print("CSV FILE CREATOR - EMAIL SENDER BOT")
         print("="*60)
         print("\nChoose an option:")
         print("1. Create sample CSV with test data")
@@ -188,14 +188,14 @@ class CSVCreator:
             file_size = os.path.getsize(self.filename)
             num_records = len(data) - 1  # Exclude header
             
-            print(f"\n✅ {success_message}")
-            print(f"📁 File: {self.filename}")
-            print(f"📍 Path: {os.path.abspath(self.filename)}")
-            print(f"📊 Records: {num_records}")
-            print(f"💾 Size: {file_size} bytes")
+            print(f"\n {success_message}")
+            print(f" File: {self.filename}")
+            print(f" Path: {os.path.abspath(self.filename)}")
+            print(f" Records: {num_records}")
+            print(f" Size: {file_size} bytes")
             
             # Show preview
-            print("\n📋 DATA PREVIEW (first 5 records):")
+            print("\n DATA PREVIEW (first 5 records):")
             print("-" * 60)
             for i, row in enumerate(data[:6]):  # Show header + 5 records
                 if i == 0:
@@ -209,13 +209,13 @@ class CSVCreator:
             return True
             
         except Exception as e:
-            print(f"\n❌ Error saving CSV file: {e}")
+            print(f"\n Error saving CSV file: {e}")
             return False
     
     def view_current_csv(self):
         """View contents of current CSV file"""
         if not os.path.exists(self.filename):
-            print(f"\n❌ File not found: {self.filename}")
+            print(f"\n File not found: {self.filename}")
             return False
         
         try:
@@ -234,7 +234,7 @@ class CSVCreator:
             return True
             
         except Exception as e:
-            print(f"\n❌ Error reading file: {e}")
+            print(f"\n Error reading file: {e}")
             return False
     
     def run(self):
@@ -251,14 +251,15 @@ class CSVCreator:
             elif choice == '4':
                 self.view_current_csv()
             elif choice == '5':
-                print("\n👋 Thank you for using CSV Creator!")
+                print("\n Thank you for using CSV Creator!")
                 print("Created for SYNTECXHUB Email Sender Bot Project")
                 break
             else:
-                print("\n❌ Invalid choice. Please enter 1-5.")
+                print("\n Invalid choice. Please enter 1-5.")
             
             input("\nPress Enter to continue...")
 
 if __name__ == "__main__":
     creator = CSVCreator()
+
     creator.run()
